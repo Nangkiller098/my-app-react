@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Stateobject from "./Stateobject";
+import Todolist from "./Todolist";
+import UseEffect from "./HookUseEffect";
 
 function App() {
+  const inistailState = 0;
+  const [count, setCount] = useState(inistailState);
+  const incrementfive = () => {
+    for (let i = 0; i <= 5; i++) {
+      setCount((pre) => pre + 1);
+    }
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <div>Count:{count}</div>
+      <button onClick={() => setCount(inistailState)}>Reset</button>
+      <button onClick={() => setCount(count + 1)}>Increasement</button>
+      <button onClick={() => setCount(count - 1)}>Decreement</button>
+      <button onClick={incrementfive}>Increasement 5</button> */}
+      {/* <Stateobject /> */}
+      {/* <Todolist /> */}
+      <UseEffect />
     </div>
   );
 }
