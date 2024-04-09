@@ -1,4 +1,4 @@
-import React, { useState, createElement } from "react";
+import React, { useState, createElement, useEffect } from "react";
 
 function handleElement(props) {
   return <li>{props.lists}</li>;
@@ -6,24 +6,17 @@ function handleElement(props) {
 
 const Todolist = () => {
   const [lists, setList] = useState();
-  const handleaddlist = (e) => {
-    e.preventDefault();
-    setList(e.target.value);
-  };
+
+  useEffect(() => {});
   return (
     <>
       <div>To Do List</div>
       <form action="post">
-        <input
-          type="text"
-          placeholder="To Do List"
-          value={lists}
-          onChange={handleaddlist}
-        />
+        <input type="text" placeholder="To Do List" value={lists} />
+
         <button onClick={() => handleElement}>Add List</button>
       </form>
       <li>{lists}</li>
-      {/* {lists && createElement("li", { lists })} */}
     </>
   );
 };
