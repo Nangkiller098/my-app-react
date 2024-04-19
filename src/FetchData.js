@@ -17,7 +17,7 @@ const FetchData = () => {
         console.log(res);
       })
       .catch((err) => console.log(err));
-  }, [id]);
+  }, [fetchId]);
   return (
     <>
       <input type="text" value={id} onChange={(e) => setId(e.target.value)} />

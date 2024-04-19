@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { DateContext } from "../App";
+import FetchDataDetails from "./FetchDataDetails";
 const FetchDateList = () => {
   const user = useContext(DateContext);
 
@@ -16,9 +17,11 @@ const FetchDateList = () => {
             <td>{user.id}</td>
             <td>{user.title}</td>
             <td>{user.body}</td>
+            <td></td>
           </tr>
         ))}
       </table>
+      {/* <FetchDataDetails data={user.id} /> */}
     </>
   );
 };
