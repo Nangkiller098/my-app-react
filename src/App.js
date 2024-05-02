@@ -1,16 +1,11 @@
 import React from "react";
 import "./App.css";
-import ComponentA from "./reduercerandusecontext/ComponentA";
-import ComponentB from "./reduercerandusecontext/ComponentB";
-import ComponentC from "./reduercerandusecontext/ComponentC";
-
+import ParentsComponents from "./callback/ParentsComponents";
 
 function App() {
   return (
     <div className="App">
-      <ComponentA />
-      <ComponentB />
-      <ComponentC />
+      <ParentsComponents />
     </div>
   );
 }
